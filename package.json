@@ -1,0 +1,55 @@
+{
+  "name": "title",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder build",
+    "build:mac": "electron-builder build --mac",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "build": {
+    "asar": false,
+    "appId": "com.appId",
+    "productName": "title",
+    "mac": {
+      "target": [
+        "default"
+      ],
+      "icon": "./assets/favicon.ico"
+    },
+    "dmg": {
+      "title": "title",
+      "icon": "./assets/favicon.ico"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ],
+      "icon": "./assets/favicon.ico"
+    },
+    "nsis": {
+      "oneClick": "true",
+      "perMachine": "false",
+      "installerIcon": "./assets/favicon.ico",
+      "createDesktopShortcut": true
+    }
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^13.1.7",
+    "electron-rebuild": "^2.3.5"
+  },
+  "dependencies": {
+    "custom-electron-titlebar": "^3.2.7",
+    "electron-reload": "^1.5.0"
+  }
+}
