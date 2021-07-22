@@ -20,7 +20,7 @@ npm i
 
 On `package.json` :
 
-```json
+```js
 {
   //...
   "name": "title"
